@@ -1,0 +1,20 @@
+{
+  "name": "recourse",
+  "owner": { "name": "meitipro", "url": "https://github.com/meitipro" },
+  "metadata": {
+    "description": "Recourse: a dispute right for machine payments, adjudicated on GenLayer.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "recourse",
+      "source": "./",
+      "description": "Use when an agent is about to pay for an API call, or has just paid and received a response that looks wrong. Judgeable promises, escrow, checks, disputes, verdicts.",
+      "version": "0.1.0",
+      "author": { "name": "meitipro" },
+      "license": "MIT",
+      "keywords": ["genlayer", "x402", "dispute", "escrow", "refund"],
+      "category": "payments"
+    }
+  ]
+}

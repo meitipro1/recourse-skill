@@ -1,0 +1,60 @@
+{
+  "frozen": true,
+  "frozen_at_commit": "ccc470a",
+  "note": "Two deployments, keyed by network. studio-next is the default and the only network offered: it runs the same logic, the same prompt and the same strings first frozen on studionet, ported to the runtime Studio Next runs, with a published diff that touches only API names (contracts/v06/PORT.diff in the Recourse repository). studionet is the first deployment, kept as the record; its entry is read by name only, to check what that record holds. A network with no entry is refused by name.",
+  "default_network": "studio-next",
+  "deployments": {
+    "studionet": {
+      "chain_id": 61999,
+      "rpc": "https://studio.genlayer.com/api",
+      "explorer": "https://explorer-studio.genlayer.com",
+      "escrow": "0x5125De939F7373eAE741B133FB32B7E9915C8F78",
+      "dispute": "0x80A98929EcA334804dbB04d31F6050bca42C0Cc4",
+      "rate_limit_per_minute": 30,
+      "faucet": "sim_fundAccount over the RPC, through the SDK's fund_account"
+    },
+    "studio-next": {
+      "chain_id": 61997,
+      "rpc": "https://studio-next.genlayer.com/api",
+      "explorer": "https://explorer-studio-dev.genlayer.com",
+      "escrow": "0x3d3fa7Fd2E143C4D6b47D31f15D19B102Ec9e0dA",
+      "dispute": "0xba5f285FdB14E3e1d130b3C9346728aBfEC479f4",
+      "pair": "v06",
+      "faucet": "sim_fundAccount over the RPC, through the SDK's fund_account"
+    }
+  },
+  "bond_wei": "1000000000000000000",
+  "bond_gen": 1,
+  "window_seconds": 300,
+  "dispute_seconds": 3600,
+  "status_codes": {
+    "0": "open",
+    "1": "withdrawn",
+    "2": "disputed",
+    "3": "resolved"
+  },
+  "verdict_codes": {
+    "0": "pending",
+    "1": "honored",
+    "2": "not_honored",
+    "3": "unclear"
+  },
+  "settlement": {
+    "honored": {
+      "payment": "seller",
+      "bond": "seller"
+    },
+    "not_honored": {
+      "payment": "buyer",
+      "bond": "buyer"
+    },
+    "unclear": {
+      "payment": "seller",
+      "bond": "buyer"
+    }
+  },
+  "linter": "https://recourse-linter.vercel.app/api/lint",
+  "mcp": "https://recourse-mcp-eight.vercel.app/api/mcp",
+  "repository": "https://github.com/meitipro/Recourse",
+  "skill": "https://github.com/meitipro/recourse-skill"
+}

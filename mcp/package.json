@@ -1,0 +1,28 @@
+{
+  "name": "recourse-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4504",
+    "build": "next build",
+    "start": "next start -p 4504",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "genlayer-js": "2.0.0-rc.1",
+    "genlayer-js-v1": "npm:genlayer-js@1.1.8",
+    "mcp-handler": "2.1.1",
+    "next": "15.1.12",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "@types/react": "19.0.0",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  }
+}

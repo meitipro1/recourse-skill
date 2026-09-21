@@ -1,0 +1,17 @@
+{
+  "name": "recourse",
+  "version": "0.1.0",
+  "description": "A dispute right for machine payments on GenLayer. Write a judgeable promise, pay through escrow, check a paid response, file a dispute, read the verdict.",
+  "author": { "name": "meitipro", "url": "https://github.com/meitipro" },
+  "homepage": "https://github.com/meitipro/recourse-skill",
+  "repository": "https://github.com/meitipro/recourse-skill",
+  "license": "MIT",
+  "keywords": ["genlayer", "x402", "machine payments", "dispute", "escrow", "refund", "chargeback"],
+  "skills": ["./"],
+  "mcpServers": {
+    "recourse": {
+      "type": "http",
+      "url": "https://recourse-mcp-eight.vercel.app/api/mcp"
+    }
+  }
+}
